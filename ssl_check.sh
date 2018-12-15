@@ -3,6 +3,15 @@
 
 ########## 共通処理  ##########
 
+function usage() {
+    # 引数のチェック
+    if [ -z $1 ]
+    then
+        echo "Usage: certificate file not found"
+        exit 1
+    fi
+}
+
 # 通知する
 function notice() {
     echo $1
@@ -15,12 +24,7 @@ function notice() {
 # 証明書ファイルのpathを設定する
 certFilePath="${1}"
 
-# 引数のチェック
-if [ -z "${certFilePath}" ]
-then
-    echo "Usage: certificate file not found"
-    exit 1
-fi
+usage $certFilePath
 
 # 証明書の期限を取得する
 cmdGetCertInfo="openssl x509 -noout -text -in ${certFilePath}"
