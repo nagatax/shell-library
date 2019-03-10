@@ -9,8 +9,12 @@
 #   0以外:異常終了
 ##########################################################
 function main() {
+
   # SSH鍵のファイルを取得し、鍵を表示する
-	for i in `/bin/ls /etc/ssh/ssh_host_*key`; do ssh-keygen -l -f $i ; done
+	for path in `ls /etc/ssh/ssh_host_*key`
+  do
+    ssh-keygen -l -f $path
+  done
   
   return #?
 }
