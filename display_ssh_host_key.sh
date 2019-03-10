@@ -11,7 +11,7 @@
 function main() {
 
   # SSH鍵のファイルを取得し、鍵を表示する
-	for path in `ls /etc/ssh/ssh_host_*key`
+  for path in `ls /etc/ssh/ssh_host_*key`
   do
     ssh-keygen -l -f $path
   done
