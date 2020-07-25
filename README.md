@@ -4,7 +4,7 @@
 
 ## コーディング規約
 
-Googleの[シェルスタイルガイド](https://google.github.io/styleguide/shell.xml)に準拠する。
+Googleの[シェルスタイルガイド](https://google.github.io/styleguide/shell.xml)に準拠します。
 
 ## 静的解析
 
